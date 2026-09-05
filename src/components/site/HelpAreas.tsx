@@ -39,15 +39,16 @@ export function HelpAreas() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [maxScrollX, setMaxScrollX] = useState(0);
 
+  // Recorrido extendido para permitir leer cada situación con calma y disfrute
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
   // DESFASE ÓPTICO (Rack Focus): Entrada y salida suave con foco de lente
-  const blurVal = useTransform(scrollYProgress, [0, 0.08, 0.88, 1], [5, 0, 0, 5]);
+  const blurVal = useTransform(scrollYProgress, [0, 0.04, 0.94, 1], [5, 0, 0, 5]);
   const filter = useTransform(blurVal, (v) => (v <= 0.2 ? "none" : `blur(${v.toFixed(1)}px)`));
-  const opacity = useTransform(scrollYProgress, [0, 0.08, 0.88, 1], [0.65, 1, 1, 0.65]);
+  const opacity = useTransform(scrollYProgress, [0, 0.04, 0.94, 1], [0.65, 1, 1, 0.65]);
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -63,17 +64,17 @@ export function HelpAreas() {
     return () => window.removeEventListener("resize", calculateWidth);
   }, []);
 
-  // Paneo horizontal guiado por el hilo conductor
-  const x = useTransform(scrollYProgress, [0.08, 0.88], [0, -maxScrollX]);
-  const progressPercent = useTransform(scrollYProgress, [0.08, 0.88], ["0%", "100%"]);
+  // Paneo horizontal extendido: mayor distancia de scroll entre cada fotograma
+  const x = useTransform(scrollYProgress, [0.06, 0.92], [0, -maxScrollX]);
+  const progressPercent = useTransform(scrollYProgress, [0.06, 0.92], ["0%", "100%"]);
 
   return (
     <section
       id="areas"
       ref={containerRef}
-      className="relative h-[300vh] md:h-[350vh] bg-gradient-to-b from-ivory via-sand/40 to-sand/65"
+      className="relative h-[420vh] md:h-[480vh] bg-gradient-to-b from-ivory via-sand/40 to-sand/65"
     >
-      {/* Viewport Sticky anclado que transforma el scroll vertical en barrido horizontal */}
+      {/* Viewport Sticky anclado durante el recorrido extendido de los 4 fotogramas */}
       <div className="sticky top-0 flex min-h-[100svh] h-screen w-full flex-col justify-center overflow-hidden px-6 py-8 md:px-12">
         
         {/* Contenedor con Rack Focus óptico */}
