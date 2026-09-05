@@ -1,0 +1,51 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/global.css";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { Header } from "@/components/site/Header";
+import { SceneNav } from "@/components/site/SceneNav";
+import { RootThread } from "@/components/site/RootThread";
+import { HeroVideo } from "@/components/site/HeroVideo";
+import { GlobalApproach } from "@/components/site/GlobalApproach";
+import { HelpAreas } from "@/components/site/HelpAreas";
+import { ProcessTimeline } from "@/components/site/ProcessTimeline";
+import { Cesar } from "@/components/site/Cesar";
+import { FinalCta, Footer } from "@/components/site/FinalCta";
+---
+
+<Layout>
+  <!-- Lenis Smooth Scroll -->
+  <SmoothScroll client:load />
+
+  <!-- Navegación Principal -->
+  <Header client:load />
+
+  <!-- Navegación Cinemática de Escenas (Director's Timeline HUD) -->
+  <SceneNav client:load />
+
+  <!-- Hilo Conductor Vivo Narrativo (Root Thread) -->
+  <RootThread client:load />
+
+  <main>
+    <!-- BLOQUE 1: HERO & SEGUNDA ESCENA (Reveal Cinemático Unificado) -->
+    <HeroVideo client:load />
+
+    <!-- BLOQUE 2: PROPUESTA DE VALOR: Intervención en el entorno real -->
+    <GlobalApproach client:visible />
+
+    <!-- BLOQUE 3: IDENTIFICACIÓN: ¿Qué situación estáis viviendo en casa? -->
+    <HelpAreas client:visible />
+
+    <!-- BLOQUE 4: PROCESO CLARO: 3 pasos hacia la calma familiar -->
+    <ProcessTimeline client:visible />
+
+    <!-- BLOQUE 5: AUTORIDAD HUMANA: César López (+18 años) -->
+    <Cesar client:visible />
+
+    <!-- BLOQUE 6: CONVERSIÓN DIRECTA: Primera valoración gratuita -->
+    <FinalCta client:visible />
+  </main>
+
+  <!-- FOOTER -->
+  <Footer client:visible />
+</Layout>
