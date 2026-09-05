@@ -21,22 +21,29 @@ export function RootThread() {
   const [activeCheckpoint, setActiveCheckpoint] = useState("top");
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const unsubscribe = smoothProgress.on("change", (latest) => {
-      setIsVisible(latest > 0.03);
+    useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsVisible(scrollY > 250);
 
-      let current = checkpoints[0].id;
-      for (let i = checkpoints.length - 1; i >= 0; i--) {
-        if (latest >= checkpoints[i].progress - 0.06) {
-          current = checkpoints[i].id;
-          break;
-        }
+      const reversedCheckpoints = [...checkpoints].reverse();
+      const current = reversedCheckpoints.find((cp) => {
+        const el = document.getElementById(cp.id);
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return rect.top <= window.innerHeight * 0.45;
+      });
+
+      if (current) {
+        setActiveCheckpoint(current.id);
       }
-      setActiveCheckpoint(current);
-    });
+    };
 
-    return () => unsubscribe();
-  }, [smoothProgress]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
