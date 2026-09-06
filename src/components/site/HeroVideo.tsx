@@ -217,11 +217,26 @@ export function HeroVideo() {
         {/* ---------------------------------------------------------------- */}
         <motion.div
           style={{ opacity: heroContentOpacity, y: heroContentY }}
-          className="relative z-10 shell px-6 pb-12 sm:pb-16 md:px-12 md:pb-24 pointer-events-auto"
+          className="relative z-10 shell px-6 pb-10 sm:pb-16 md:px-12 md:pb-24 pointer-events-auto"
         >
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto sm:mx-0 text-center sm:text-left">
+            {/* Label / Eyebrow Hero centrado en mobile */}
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(8px)", y: 10 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{ duration: 0.9, ease: easeFocus, delay: 0.3 }}
+              className="flex justify-center sm:justify-start mb-3 sm:mb-4"
+            >
+              {/* <div className="inline-flex items-center gap-2 rounded-full border border-ivory/20 bg-ink/40 px-3.5 py-1.5 backdrop-blur-md shadow-xs">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                <span className="text-[0.6875rem] font-medium tracking-[0.24em] uppercase text-ivory/80">
+                  INTERVENCIÓN SOCIOEDUCATIVA
+                </span>
+              </div> */}
+            </motion.div>
+
             {/* Headline con aparición progresiva al cargar la página */}
-            <h1 className="mt-4 sm:mt-5 text-[2.3rem] leading-[1.1] text-ivory sm:text-[3.2rem] md:text-[4.2rem] lg:text-[4.6rem] tracking-tight">
+            <h1 className="text-[2.1rem] leading-[1.12] text-ivory sm:text-[3.2rem] md:text-[4.2rem] lg:text-[4.6rem] tracking-tight">
               <span className="inline-block">
                 {headlineLine1.map((w, i) => (
                   <motion.span
@@ -263,7 +278,7 @@ export function HeroVideo() {
             </h1>
 
             {/* Subheadline */}
-            <p className="mt-5 sm:mt-6 max-w-xl text-base leading-relaxed text-ivory/85 md:text-lg">
+            <p className="mt-4 sm:mt-6 max-w-xl mx-auto sm:mx-0 text-sm sm:text-base leading-relaxed text-ivory/85 md:text-lg">
               {subheadlineWords.map((w, i) => (
                 <motion.span
                   key={i}
@@ -281,7 +296,29 @@ export function HeroVideo() {
               ))}
             </p>
 
-            {/* Botones de acción CTA (ocultos en mobile para no invadir el header) */}
+            {/* Botón CTA Mobile (centrado) */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.85,
+                ease: easeEditorial,
+                delay: 1.85,
+              }}
+              className="mt-6 flex justify-center sm:hidden"
+            >
+              <a
+                href="#contacto"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-xs font-medium text-primary-foreground shadow-sm transition-all"
+              >
+                <span>Primera valoración gratuita</span>
+                <span className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </a>
+            </motion.div> */}
+
+            {/* Botones de acción CTA en desktop */}
             <motion.div
               initial={{ opacity: 0, filter: "blur(6px)", y: 12 }}
               animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
@@ -410,7 +447,7 @@ export function HeroVideo() {
             </motion.div>
 
             {/* Headline: Palabra a palabra enfocado progresivamente */}
-            <h2 className="mt-8 font-display text-[2.4rem] sm:text-[3.2rem] md:text-[4.2rem] lg:text-[4.6rem] leading-[1.1] text-foreground tracking-tight max-w-4xl">
+            <h2 className="mt-6 sm:mt-8 font-display text-[1.85rem] sm:text-[3rem] md:text-[4.2rem] lg:text-[4.6rem] leading-[1.12] text-foreground tracking-tight max-w-4xl">
               {headlineWords.map((w, i) => {
                 const start = headlineStart + i * headlineStep * 0.85;
                 const end = start + headlineStep * 1.35;
@@ -429,7 +466,7 @@ export function HeroVideo() {
             </h2>
 
             {/* Supporting text: Palabra a palabra */}
-            <p className="mt-7 max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-muted-foreground">
+            <p className="mt-4 sm:mt-7 max-w-2xl text-sm sm:text-lg md:text-xl leading-relaxed text-muted-foreground">
               {supportingWords.map((w, i) => {
                 const start = supportingStart + i * supportingStep * 0.85;
                 const end = start + supportingStep * 1.35;
@@ -454,7 +491,7 @@ export function HeroVideo() {
                 filter: closingFilter,
                 y: closingY,
               }}
-              className="mt-12 flex flex-wrap items-center justify-center gap-6 border-t border-border/70 pt-8 text-xs sm:text-sm font-medium tracking-wide text-foreground/80 uppercase"
+              className="mt-6 sm:mt-12 flex flex-wrap items-center justify-center gap-3 sm:gap-6 border-t border-border/70 pt-4 sm:pt-8 text-[11px] sm:text-sm font-medium tracking-wide text-foreground/80 uppercase"
             >
               <span className="text-foreground/70">No juzgar</span>
               <span className="text-primary/60">•</span>
