@@ -184,7 +184,7 @@ export function HeroVideo() {
       className="relative h-[320vh] md:h-[360vh] bg-ink"
     >
       {/* Contenedor Sticky que mantiene la experiencia cinematográfica en el viewport */}
-      <div className="sticky top-0 flex min-h-[100svh] h-screen w-full flex-col justify-end overflow-hidden bg-ink">
+      <div className="sticky top-0 flex min-h-[100svh] h-screen w-full flex-col justify-center sm:justify-end overflow-hidden bg-ink">
         {/* ---------------------------------------------------------------- */}
         {/* CAPA 1: VÍDEO HERO CON ENTRADA CINEMATOGRÁFICA                   */}
         {/* ---------------------------------------------------------------- */}
@@ -217,7 +217,7 @@ export function HeroVideo() {
         {/* ---------------------------------------------------------------- */}
         <motion.div
           style={{ opacity: heroContentOpacity, y: heroContentY }}
-          className="relative z-10 shell px-6 pb-10 sm:pb-16 md:px-12 md:pb-24 pointer-events-auto"
+          className="relative z-10 shell px-6 pb-0 sm:pb-16 md:px-12 md:pb-24 pointer-events-auto"
         >
           <div className="max-w-3xl mx-auto sm:mx-0 text-center sm:text-left">
             {/* Label / Eyebrow Hero centrado en mobile */}
