@@ -85,7 +85,7 @@ export function FinalCta() {
             <StaggerItem>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 {/* Botón principal donde desemboca el hilo conductor */}
-                <div className="relative group">
+                {/* <div className="relative group">
                   <a
                     href="mailto:info@raices-intervencion.es?subject=Primera%20valoración%20gratuita%20-%20RAÍCES"
                     className="relative z-10 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_0_25px_rgba(192,86,56,0.6)]"
@@ -95,9 +95,8 @@ export function FinalCta() {
                       →
                     </span>
                   </a>
-                  {/* Resplandor orgánico vivo en el botón */}
                   <span className="absolute -inset-1 rounded-full bg-primary/20 blur-md group-hover:bg-primary/40 transition-colors pointer-events-none" />
-                </div>
+                </div> */}
 
                 <a
                   href="tel:+34645207373"
