@@ -13,7 +13,7 @@ const steps = [
     n: "01",
     tag: "VALORACIÓN",
     title: "Primera valoración gratuita",
-    text: "Hablamos por teléfono o videollamada. Escuchamos vuestra situación en profundidad, sin prisas, con absoluta confidencialidad y sin ningún compromiso.",
+    text: "Escuchamos vuestra situación en profundidad, sin prisas, con absoluta confidencialidad y sin ningún compromiso.",
     timeframe: "Paso inicial · 30-45 min",
   },
   {
