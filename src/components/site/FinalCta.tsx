@@ -19,7 +19,7 @@ export function FinalCta() {
   const threadLength = useTransform(scrollYProgress, [0.2, 0.85], [0, 1]);
 
   return (
-    <div ref={sectionRef} className="relative bg-secondary/55">
+    <div ref={sectionRef} className="relative bg-background">
       {/* TRANSICIÓN CINEMÁTICA: El Horizonte Curvo Nocturno */}
       <div className="relative w-full overflow-hidden leading-none z-10 pointer-events-none">
         <svg
