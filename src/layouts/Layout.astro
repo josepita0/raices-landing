@@ -2,12 +2,18 @@
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
 const {
   title = "RAÍCES · Intervención socioeducativa con adolescentes y familias",
-  description = "Acompañamiento socioeducativo para adolescentes y familias en Petrer. Primera valoración con César López, Integrador Social.",
+  description = "Acompañamiento socioeducativo para adolescentes y familias en Petrer, Elda y comarca. Primera valoración con César López, Integrador Social.",
+  image = "/images/hero-poster.webp",
 } = Astro.props;
+
+const siteURL = Astro.site ?? new URL("https://raices-intervencion.es");
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
+const socialImageURL = new URL(image, canonicalURL);
 ---
 
 <!doctype html>
@@ -17,18 +23,33 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index, follow" />
 
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RAÍCES" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+
+    <!-- Performance LCP: Preload de la imagen principal del Hero -->
+    <link rel="preload" as="image" href="/images/hero-poster.webp" type="image/webp" />
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,6 +57,42 @@ const {
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Marcado Estructurado Schema.org (JSON-LD) para SEO Local -->
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "RAÍCES · Intervención Socioeducativa",
+        "description": description,
+        "url": canonicalURL.toString(),
+        "telephone": "+34645207373",
+        "priceRange": "Primera valoración gratuita",
+        "image": socialImageURL.toString(),
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Prevere Conrado Poveda 2",
+          "addressLocality": "Petrer",
+          "addressRegion": "Alicante",
+          "addressCountry": "ES"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Petrer" },
+          { "@type": "City", "name": "Elda" },
+          { "@type": "City", "name": "Novelda" },
+          { "@type": "City", "name": "Sax" },
+          { "@type": "AdministrativeArea", "name": "Alicante" }
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "César López",
+          "jobTitle": "Integrador y Educador Social",
+          "description": "Especialista en intervención socioeducativa con adolescentes y acompañamiento familiar."
+        }
+      })}
     />
   </head>
   <body class="bg-[#FAF8F5] text-[#1E1C1A] antialiased selection:bg-[#C05638]/20 selection:text-[#1E1C1A]">

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap: sustituir por la URL del dominio definitivo una vez publicado
+Sitemap: https://raices-intervencion.es/sitemap-index.xml
