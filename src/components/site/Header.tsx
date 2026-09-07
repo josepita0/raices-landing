@@ -22,7 +22,13 @@ export function Header() {
           className="group flex items-center gap-3 leading-none"
           aria-label="RAÍCES - Inicio"
         >
-          <img src="/logo.webp" alt="RAÍCES" className="h-10 w-12 rounded" />
+          <img
+            src="/logo.webp"
+            alt="RAÍCES · Intervención socioeducativa"
+            width={48}
+            height={40}
+            className="h-10 w-12 rounded object-contain"
+          />
           <div>
             <span className="font-display text-2xl tracking-tight text-ivory">
               RAÍCES
