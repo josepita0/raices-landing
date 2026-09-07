@@ -87,7 +87,7 @@ export function FinalCta() {
                 {/* Botón principal donde desemboca el hilo conductor */}
                 {/* <div className="relative group">
                   <a
-                    href="mailto:info@raices-intervencion.es?subject=Primera%20valoración%20gratuita%20-%20RAÍCES"
+                    href="mailto:[Por definir]?subject=Primera%20valoración%20gratuita%20-%20RAÍCES"
                     className="relative z-10 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_0_25px_rgba(192,86,56,0.6)]"
                   >
                     <span>Solicitar primera valoración gratuita</span>
@@ -143,13 +143,32 @@ export function Footer() {
       <MotionReveal duration={0.7} y={0}>
         <div className="shell grid gap-8 border-t border-ivory/15 pt-12 md:grid-cols-3">
           <div className="flex items-center gap-3">
-            <img src="/logo.webp" alt="RAÍCES" className="h-1o w-12 rounded" />
+            <img
+              src="/logo.webp"
+              alt="RAÍCES · Intervención socioeducativa"
+              width={48}
+              height={40}
+              className="h-10 w-12 rounded object-contain"
+            />
             <div>
               <p className="font-display text-2xl tracking-tight">RAÍCES</p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-ivory/60">
                 Intervención Socioeducativa
               </p>
-              <p className="mt-4 text-xs text-ivory/40">
+              <div className="mt-3 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[11px] text-ivory/50">
+                <a href="/aviso-legal" className="hover:text-ivory transition-colors">
+                  Aviso Legal
+                </a>
+                <span>·</span>
+                <a href="/privacidad" className="hover:text-ivory transition-colors">
+                  Privacidad
+                </a>
+                <span>·</span>
+                <a href="/cookies" className="hover:text-ivory transition-colors">
+                  Cookies
+                </a>
+              </div>
+              <p className="mt-3 text-xs text-ivory/40">
                 © {new Date().getFullYear()} RAÍCES. Todos los derechos
                 reservados.
               </p>
