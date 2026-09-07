@@ -16,14 +16,26 @@ export function Header() {
       className="absolute inset-x-0 top-0 z-30"
     >
       <div className="shell flex items-center justify-between px-6 py-6 md:px-12">
-        <a href="#top" className="group leading-none" aria-label="RAÍCES - Inicio">
-          <span className="font-display text-2xl tracking-tight text-ivory">RAÍCES</span>
-          <span className="block text-[0.625rem] uppercase tracking-[0.26em] text-ivory/70 transition-colors group-hover:text-ivory">
-            Intervención socioeducativa
-          </span>
+        <a
+          href="#top"
+          className="group flex items-center gap-3 leading-none"
+          aria-label="RAÍCES - Inicio"
+        >
+          <img src="/logo.webp" alt="RAÍCES" className="h-10 w-12 rounded" />
+          <div>
+            <span className="font-display text-2xl tracking-tight text-ivory">
+              RAÍCES
+            </span>
+            <span className="block text-[0.625rem] uppercase tracking-[0.26em] text-ivory/70 transition-colors group-hover:text-ivory">
+              Intervención socioeducativa
+            </span>
+          </div>
         </a>
 
-        <nav className="hidden items-center gap-9 md:flex" aria-label="Navegación principal">
+        <nav
+          className="hidden items-center gap-9 md:flex"
+          aria-label="Navegación principal"
+        >
           {nav.map((item) => (
             <a
               key={item.href}

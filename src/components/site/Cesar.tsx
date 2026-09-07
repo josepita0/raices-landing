@@ -120,10 +120,10 @@ export function Cesar() {
               <div className="h-10 w-px bg-border/80" />
               <div>
                 <p className="font-display text-xl text-foreground font-medium">
-                  [Por definir]
+                  Petrer
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
-                  Atención presencial y online
+                  Atención presencial
                 </p>
               </div>
             </div>

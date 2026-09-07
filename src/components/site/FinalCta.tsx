@@ -100,13 +100,13 @@ export function FinalCta() {
                 </div>
 
                 <a
-                  href="tel:+34622728146"
+                  href="tel:+34645207373"
                   className="inline-flex items-center rounded-full border border-ivory/30 px-6 py-4 text-sm font-medium text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:border-ivory/70 hover:bg-ivory/5"
                 >
-                  Llamar al [Por definir]]
+                  Llamar al 645 20 73 73
                 </a>
                 <a
-                  href="https://wa.me/34622728146?text=Hola%20César,%20me%20gustaría%20solicitar%20una%20primera%20valoración%20gratuita%20para%20mi%20familia"
+                  href="https://wa.me/34645207373?text=Hola%20César,%20me%20gustaría%20solicitar%20una%20primera%20valoración%20gratuita%20para%20mi%20familia"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-6 py-4 text-sm font-medium text-emerald-300 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-500/20"
@@ -121,7 +121,9 @@ export function FinalCta() {
               <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-ivory/15 pt-8 text-sm text-ivory/70">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-primary" />
-                  <span>Atención presencial en [Por definir] </span>
+                  <span>
+                    Atención presencial en Av. Prevere Conrado Poveda 2, Petrer
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
@@ -141,15 +143,18 @@ export function Footer() {
     <footer className="bg-ink px-6 pb-14 text-ivory md:px-12">
       <MotionReveal duration={0.7} y={0}>
         <div className="shell grid gap-8 border-t border-ivory/15 pt-12 md:grid-cols-3">
-          <div>
-            <p className="font-display text-2xl tracking-tight">RAÍCES</p>
-            <p className="mt-1 text-xs uppercase tracking-[0.2em] text-ivory/60">
-              Intervención Socioeducativa
-            </p>
-            <p className="mt-4 text-xs text-ivory/40">
-              © {new Date().getFullYear()} RAÍCES. Todos los derechos
-              reservados.
-            </p>
+          <div className="flex items-center gap-3">
+            <img src="/logo.webp" alt="RAÍCES" className="h-1o w-12 rounded" />
+            <div>
+              <p className="font-display text-2xl tracking-tight">RAÍCES</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-ivory/60">
+                Intervención Socioeducativa
+              </p>
+              <p className="mt-4 text-xs text-ivory/40">
+                © {new Date().getFullYear()} RAÍCES. Todos los derechos
+                reservados.
+              </p>
+            </div>
           </div>
         </div>
       </MotionReveal>
