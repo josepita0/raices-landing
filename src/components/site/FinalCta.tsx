@@ -155,6 +155,27 @@ export function Footer() {
               </p>
             </div>
           </div>
+
+          <div className="md:col-span-2 flex items-center justify-start md:justify-end">
+            <a
+              href="https://pitass.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-[0.625rem] uppercase tracking-[0.18em] text-ivory/40 transition-colors duration-300 hover:text-ivory/70"
+              aria-label="Diseñado y desarrollado por José Pita — pitass.com"
+            >
+              <span>Diseñado y desarrollado por</span>
+              <img
+                src="/creator-logo.webp"
+                alt="José Pita"
+                width={108}
+                height={36}
+                loading="lazy"
+                decoding="async"
+                className="w-auto opacity-60 transition-opacity duration-300 group-hover:opacity-100 h-[3rem]"
+              />
+            </a>
+          </div>
         </div>
       </MotionReveal>
     </footer>
