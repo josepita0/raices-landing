@@ -22,26 +22,36 @@ export function RootThread() {
   const [activeCheckpoint, setActiveCheckpoint] = useState("top");
   const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-    const handleScroll = () => {
+  useEffect(() => {
+    let ticking = false;
+
+    const updateCheckpoints = () => {
       const scrollY = window.scrollY;
       setIsVisible(scrollY > 250);
 
+      const vhThreshold = window.innerHeight * 0.45;
       const reversedCheckpoints = [...checkpoints].reverse();
       const current = reversedCheckpoints.find((cp) => {
         const el = document.getElementById(cp.id);
         if (!el) return false;
-        const rect = el.getBoundingClientRect();
-        return rect.top <= window.innerHeight * 0.45;
+        return el.getBoundingClientRect().top <= vhThreshold;
       });
 
       if (current) {
         setActiveCheckpoint(current.id);
       }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateCheckpoints);
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    updateCheckpoints();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

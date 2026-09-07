@@ -159,12 +159,13 @@ export function GlobalApproach() {
               className="aspect-[4/5] w-full overflow-hidden"
             >
               <img
-                src="/images/friends.jpg"
+                src="/images/friends.webp"
                 alt="Madre y adolescente conversando con calma en la cocina de casa"
-                width={1200}
-                height={1500}
+                width={1280}
+                height={720}
                 className="h-full w-full object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </motion.div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />

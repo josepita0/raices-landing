@@ -16,26 +16,35 @@ export function SceneNav() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const updateScenes = () => {
       const scrollY = window.scrollY;
       setIsVisible(scrollY > 250);
 
-      // En un Stacking Deck, la sección activa es la última (en orden DOM) cuya parte superior ha llegado a la zona de visión
+      const vhThreshold = window.innerHeight * 0.4;
       const reversedScenes = [...scenes].reverse();
       const current = reversedScenes.find((s) => {
         const el = document.getElementById(s.id);
         if (!el) return false;
-        const rect = el.getBoundingClientRect();
-        return rect.top <= window.innerHeight * 0.40;
+        return el.getBoundingClientRect().top <= vhThreshold;
       });
 
       if (current) {
         setActiveId(current.id);
       }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScenes);
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    updateScenes();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

@@ -204,7 +204,7 @@ export function HeroVideo() {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="none"
           >
             <source src="/video/hero-loop.webm" type="video/webm" />
           </video>
