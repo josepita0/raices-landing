@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 
 const checkpoints = [
   { id: "top", label: "Inicio", n: "01", progress: 0.05 },
-  { id: "metodo", label: "Método", n: "02", progress: 0.28 },
-  { id: "areas", label: "Situaciones", n: "03", progress: 0.52 },
-  { id: "proceso", label: "Proceso", n: "04", progress: 0.72 },
-  { id: "cesar", label: "César", n: "05", progress: 0.86 },
+  { id: "metodo", label: "Método", n: "02", progress: 0.25 },
+  { id: "areas", label: "Situaciones", n: "03", progress: 0.46 },
+  { id: "proceso", label: "Proceso", n: "04", progress: 0.65 },
+  { id: "cesar", label: "César", n: "05", progress: 0.80 },
+  { id: "proyectos", label: "Proyectos", n: "06", progress: 0.90 },
   { id: "contacto", label: "Valoración", n: "CTA", progress: 0.98 },
 ];
 

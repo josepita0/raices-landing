@@ -7,6 +7,7 @@ const scenes = [
   { id: "areas", label: "Situaciones", number: "03" },
   { id: "proceso", label: "Proceso", number: "04" },
   { id: "cesar", label: "César", number: "05" },
+  { id: "proyectos", label: "Proyectos", number: "06" },
   { id: "contacto", label: "Valoración", number: "CTA" },
 ];
 

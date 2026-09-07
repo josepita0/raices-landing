@@ -5,6 +5,7 @@ const nav = [
   { label: "Cómo trabajamos", href: "#proceso" },
   { label: "Áreas de ayuda", href: "#areas" },
   { label: "Quién acompaña", href: "#cesar" },
+  { label: "Proyectos", href: "#proyectos" },
 ];
 
 export function Header() {
