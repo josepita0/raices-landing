@@ -87,24 +87,24 @@ export function Cesar() {
           </StaggerItem>
           <StaggerItem>
             <p className="mt-3 text-lg font-medium text-primary md:text-xl">
-              Educador e Integrador Social. Especializado en adolescencia y
-              familia.
+              Técnico Superior en Integración Social. Más de 18 años de
+              experiencia en contexto socioeducativo.
             </p>
           </StaggerItem>
           <StaggerItem>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
-              Amplia trayectoria con adolescentes y a sus familias en el hogar,
-              en el instituto y en su entorno real. Mi trabajo no se basa en
-              juzgar ni en imponer recetas rápidas, sino en una convicción
-              sencilla: primero escuchar y comprender, para después construir
-              soluciones sostenibles.
+              Durante casi dos décadas he acompañado a adolescentes y familias
+              en momentos de dificultad: en el hogar, en el instituto y en su
+              entorno más cercano. Esa experiencia me ha enseñado que no hay
+              recetas rápidas ni juicios que ayuden. Solo escucha real, criterio
+              profesional y un plan de trabajo adaptado a cada familia.
             </p>
           </StaggerItem>
 
           <StaggerItem>
             <blockquote className="mt-6 border-l-2 border-primary pl-4 py-1.5 italic text-foreground/90 font-display text-xl md:text-2xl">
               &ldquo;El cambio no ocurre de un día para otro. Pero puede empezar
-              hoy por una conversación.&rdquo;
+              hoy, con una conversación.&rdquo;
             </blockquote>
           </StaggerItem>
 
