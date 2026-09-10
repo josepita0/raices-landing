@@ -205,6 +205,7 @@ export function HeroVideo() {
             loop
             playsInline
             preload="none"
+            aria-label="Vídeo de fondo mostrando un entorno familiar y natural"
           >
             <source src="/video/hero-loop.webm" type="video/webm" />
           </video>

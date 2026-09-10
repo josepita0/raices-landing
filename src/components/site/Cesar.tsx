@@ -56,20 +56,17 @@ export function Cesar() {
         >
           <motion.div
             style={{ filter: photoFilter, scale: photoScale }}
-            className="aspect-[4/5] w-full overflow-hidden will-change-[filter,transform] flex flex-col items-center justify-center bg-sand/70 p-8 text-center"
+            className="aspect-[4/5] w-full overflow-hidden will-change-[filter,transform]"
           >
-            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 border border-primary/25 text-primary">
-              <span className="font-display text-4xl">CL</span>
-            </div>
-            <div className="mt-5 max-w-xs">
-              <p className="font-display text-2xl text-foreground">César López</p>
-              <p className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
-                Integrador y Educador Social
-              </p>
-              <p className="mt-2 text-[11px] text-muted-foreground/75 font-mono">
-                Atención presencial en Petrer
-              </p>
-            </div>
+            <img
+              src="/images/cesar.webp"
+              alt="César López, Integrador y Educador Social especializado en adolescencia y familia"
+              width={800}
+              height={1000}
+              className="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
         </div>

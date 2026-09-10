@@ -11,7 +11,7 @@ const {
   image = "/images/hero-poster.webp",
 } = Astro.props;
 
-const siteURL = Astro.site ?? new URL("https://raices-intervencion.es");
+const siteURL = Astro.site ?? new URL("https://raicesintervencionsocial.com");
 const canonicalURL = new URL(Astro.url.pathname, siteURL);
 const socialImageURL = new URL(image, canonicalURL);
 ---
