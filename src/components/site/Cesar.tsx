@@ -92,7 +92,7 @@ export function Cesar() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground text-justify md:text-left md:text-lg">
               Durante casi dos décadas he acompañado a adolescentes y familias
               en momentos de dificultad: en el hogar, en el instituto y en su
               entorno más cercano. Esa experiencia me ha enseñado que no hay

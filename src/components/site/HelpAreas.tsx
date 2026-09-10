@@ -139,7 +139,7 @@ export function HelpAreas() {
                     <span className="text-[10px] sm:text-[0.6875rem] uppercase tracking-wider font-semibold text-muted-foreground block">
                       De lo que ocurre hoy en casa:
                     </span>
-                    <p className="mt-1 text-xs sm:text-sm leading-snug text-foreground/80">
+                    <p className="mt-1 text-xs sm:text-sm leading-snug text-foreground/80 text-justify">
                       {s.sintoma}
                     </p>
                   </div>
@@ -149,7 +149,7 @@ export function HelpAreas() {
                       <span>Hacia dónde avanzamos con RAÍCES</span>
                       <span>→</span>
                     </span>
-                    <p className="mt-1 text-xs sm:text-sm leading-snug text-foreground font-medium">
+                    <p className="mt-1 text-xs sm:text-sm leading-snug text-foreground font-medium text-justify">
                       {s.hacia}
                     </p>
                   </div>

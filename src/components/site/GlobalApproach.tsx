@@ -186,13 +186,13 @@ export function GlobalApproach() {
                   Llevamos el cambio al contexto real.
                 </span>
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground text-justify md:text-left md:text-lg">
                 En Raíces podemos trabajar en consulta, pero nuestro valor diferencial está en trasladar la intervención allí donde las dificultades se manifiestan: en el hogar, en el centro educativo y en las rutinas cotidianas.
               </p>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground text-justify md:text-left md:text-lg">
                 Una vez identificadas las necesidades, nos diferenciamos en llevar la intervención cuando el caso lo necesita, directamente al contexto real, observando las dinámicas que influyen en la situación y poniendo en práctica estrategias adaptadas a cada persona y familia.
               </p>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground text-justify md:text-left md:text-lg">
                 Porque comprender lo que ocurre es el primer paso. Trabajarlo en la realidad cotidiana es lo que permite consolidar el cambio.
               </p>
             </MotionReveal>

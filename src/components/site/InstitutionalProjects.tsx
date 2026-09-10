@@ -118,7 +118,7 @@ export function InstitutionalProjects() {
           </MotionReveal>
 
           <MotionReveal duration={durations.reveal} delay={0.16} y={20}>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground text-justify md:text-left md:text-lg">
               Diseñamos y desarrollamos proyectos educativos y socioeducativos
               adaptados a las necesidades de cada centro, entidad y colectivo.
             </p>
@@ -202,7 +202,7 @@ export function InstitutionalProjects() {
               ¿Con quién trabajamos?
             </h3>
 
-            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed text-justify md:text-left">
               Trabajamos en estrecha colaboración con centros educativos,
               administraciones públicas, tercer sector y tejido empresarial:
             </p>

@@ -207,7 +207,7 @@ export function ProcessTimeline() {
                 {steps[activeStep].title}
               </h3>
 
-              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground text-justify">
                 {steps[activeStep].text}
               </p>
 
