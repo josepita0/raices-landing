@@ -87,7 +87,7 @@ export function FinalCta() {
                 {/* Botón principal donde desemboca el hilo conductor */}
                 {/* <div className="relative group">
                   <a
-                    href="mailto:[Por definir]?subject=Primera%20valoración%20gratuita%20-%20RAÍCES"
+                    href="mailto:raicesintervencionsocial@gmail.com?subject=Primera%20valoración%20gratuita%20-%20RAÍCES"
                     className="relative z-10 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_0_25px_rgba(192,86,56,0.6)]"
                   >
                     <span>Solicitar primera valoración gratuita</span>
