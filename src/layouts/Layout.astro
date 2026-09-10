@@ -1,4 +1,6 @@
 ---
+import { Analytics } from "@vercel/analytics/react";
+
 interface Props {
   title?: string;
   description?: string;
@@ -97,5 +99,6 @@ const socialImageURL = new URL(image, canonicalURL);
   </head>
   <body class="bg-[#FAF8F5] text-[#1E1C1A] antialiased selection:bg-[#C05638]/20 selection:text-[#1E1C1A]">
     <slot />
+    <Analytics />
   </body>
 </html>
